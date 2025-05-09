@@ -1,7 +1,7 @@
 import { IsLatitude, IsLongitude, IsNotEmpty, IsNumber, IsString, Validate } from 'class-validator';
-import { IsValidExcludeParts } from '../../../utils/validators/weather-part.validator';
+import { IsValidExcludeParts } from '@utils/validators/weather-part.validator';
 import { Transform } from 'class-transformer';
-import { normalizePartTransform } from '../../../utils/transforms/normalize-part.transform';
+import { normalizePartTransform } from '@utils/transforms/normalize-part.transform';
 
 export class WeatherDto {
   @IsNotEmpty()
