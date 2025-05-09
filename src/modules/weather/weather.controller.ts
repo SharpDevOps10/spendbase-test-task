@@ -1,6 +1,6 @@
 import { Controller, Post, Get, Body, Query, UseInterceptors } from '@nestjs/common';
-import { WeatherService } from './weather.service';
-import { WeatherDto } from './dtos/weather.dto';
+import { WeatherService } from '@weather/weather.service';
+import { WeatherDto } from '@weather/dtos/weather.dto';
 import { ResponseFormatInterceptor } from '@utils/interceptors/response-format.interceptor';
 
 @Controller('weather')
