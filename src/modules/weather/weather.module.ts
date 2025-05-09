@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { WeatherService } from './weather.service';
-import { WeatherRepository } from './weather.repository';
-import { WeatherApiClient } from './weather-api.client';
-import { WeatherController } from './weather.controller';
+import { WeatherService } from '@weather/weather.service';
+import { WeatherRepository } from '@weather/weather.repository';
+import { WeatherApiClient } from '@weather/weather-api.client';
+import { WeatherController } from '@weather/weather.controller';
 
 @Module({
   providers: [WeatherService, WeatherRepository, WeatherApiClient],
