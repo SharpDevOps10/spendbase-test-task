@@ -1,7 +1,7 @@
 import { Controller, Post, Get, Body, Query, UseInterceptors } from '@nestjs/common';
 import { WeatherService } from './weather.service';
 import { WeatherDto } from './dtos/weather.dto';
-import { ResponseFormatInterceptor } from '../../utils/interceptors/response-format.interceptor';
+import { ResponseFormatInterceptor } from '@utils/interceptors/response-format.interceptor';
 
 @Controller('weather')
 export class WeatherController {

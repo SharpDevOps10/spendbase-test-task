@@ -1,5 +1,5 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
-import { DatabaseService } from '../../database/db.service';
+import { DatabaseService } from '@database/db.service';
 
 @Injectable()
 export class WeatherRepository implements OnModuleInit {

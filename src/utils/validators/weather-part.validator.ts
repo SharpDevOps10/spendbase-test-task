@@ -1,5 +1,5 @@
 import { ValidatorConstraint, ValidatorConstraintInterface } from 'class-validator';
-import { WeatherPart } from '../../enums/weather-part.enum';
+import { WeatherPart } from '@enums/weather-part.enum';
 
 @ValidatorConstraint({ name: 'IsValidExcludeParts', async: false })
 export class IsValidExcludeParts implements ValidatorConstraintInterface {

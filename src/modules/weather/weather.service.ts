@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { WeatherRepository } from './weather.repository';
-import { WeatherApiClient } from './weather-api.client';
-import { WeatherDto } from './dtos/weather.dto';
+import { WeatherRepository } from '@weather/weather.repository';
+import { WeatherApiClient } from '@weather/weather-api.client';
+import { WeatherDto } from '@weather/dtos/weather.dto';
 
 @Injectable()
 export class WeatherService {
