@@ -1,6 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { WeatherRepository } from './weather.repository';
 import { WeatherApiClient } from './weather-api.client';
+import { WeatherDto } from './dtos/weather.dto';
 
 @Injectable()
 export class WeatherService {
@@ -9,14 +10,14 @@ export class WeatherService {
     private readonly apiClient: WeatherApiClient,
   ) {}
 
-  async saveWeatherData (lat: number, lon: number, part: string): Promise<unknown> {
-    const data = await this.apiClient.fetchWeather(lat, lon, part);
-    await this.repository.saveWeatherData(lat, lon, part, data);
+  async saveWeatherData (dto: WeatherDto): Promise<unknown> {
+    const data = await this.apiClient.fetchWeather(dto.lat, dto.lon, dto.part);
+    await this.repository.saveWeatherData(dto.lat, dto.lon, dto.part, data);
     return data;
   }
 
-  async getWeatherData (lat: number, lon: number, part: string): Promise<unknown> {
-    const data = await this.repository.getWeatherByLocation(lat, lon, part);
+  async getWeatherData (dto: WeatherDto): Promise<unknown> {
+    const data = await this.repository.getWeatherByLocation(dto.lat, dto.lon, dto.part);
     if (!data) throw new NotFoundException('Weather data not found for given coordinates');
     return data;
   }
