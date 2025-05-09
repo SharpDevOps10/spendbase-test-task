@@ -1,0 +1,8 @@
+node_modules
+dist
+build
+!wait-for-it.sh
+Dockerfile*
+.dockerignore
+.git
+.gitignore
